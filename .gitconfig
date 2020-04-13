@@ -3,3 +3,5 @@
 	email = martinmalmstrom@hotmail.com
 [core]
     editor = vim
+[http]
+	postBuffer = 100M

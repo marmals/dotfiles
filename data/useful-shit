@@ -1,0 +1,6 @@
+connect wifi with NetworkManager:
+
+-nmcli d wifi list
+list all networks
+
+-nmcli d wifi connect "wifi" password "password"

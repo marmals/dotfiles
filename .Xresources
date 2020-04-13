@@ -1,0 +1,104 @@
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcdfilter
+
+
+URxvt*imLocale: sv_SE.utf8 
+URxvt*termName: rxvt-unicode-256color
+URxvt*buffered: false
+URxvt.loginShell: true
+URxvt.saveLines: 2000
+URxvt.intensityStyles: false
+
+! Fonts
+URxvt.allow_bold: false
+URxvt*font: xft:DejaVu Sans Mono:size=14,xft:FontAwesome:size=14
+URxvt*boldFont: xft:DejaVu Sans Mono:size=14,xft:FontAwesome:size=14
+
+! Fix font space
+!URxvt*letterSpace: 0 
+
+! Scrollbar
+URxvt.scrollStyle: rxvt
+URxvt.scrollBar: false
+
+! Cursor
+URxvt.cursorBlink: true
+URxvt.cursorColor: #bbc5ff
+URxvt.cursorUnderline: false
+
+! Pointer
+URxvt.pointerBlank: true
+
+! special
+URxvt*background:  [80]#10151a
+URxvt*foreground:   #657b83
+!!URxvt*fading: 40
+URxvt*fadeColor:    #10151a
+
+! Border
+URxvt*borderWidth: 0
+URxvt*internalBorder: 0
+URxvt*externalBorder: 0
+
+
+
+
+!! Extensions
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
+URxvt.colorUL: #4682B4
+!! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.url-select.underline: true
+!! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!! resize-font
+URxvt.resize-font.smaller: C-j
+URxvt.resize-font.bigger:  C-k
+!! Matcher
+URxvt.url-launcher:	urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.matcher.button: 1
+!!clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt*depth: 32
+
+
+
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3

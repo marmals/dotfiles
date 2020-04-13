@@ -1,0 +1,7 @@
+configuration{
+    modi: "window,drun,ssh,combi";
+    rofi.theme: ~/.config/rofi/themes/marmals
+    combi-modi: "window,drun,ssh";
+}
+
+

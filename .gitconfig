@@ -1,0 +1,5 @@
+[user]
+	name = martin
+	email = martinmalmstrom@hotmail.com
+[core]
+    editor = vim

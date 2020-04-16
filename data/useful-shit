@@ -4,3 +4,33 @@ connect wifi with NetworkManager:
 list all networks
 
 -nmcli d wifi connect "wifi" password "password"
+
+
+
+
+fix bare repo dotfiles:
+Setup:
+    # I am not sure but I think the name of the directory you create locally and the name of the repository need to be the same
+    mkdir $HOME/.dotfiles
+    git init --bare $HOME/.dotfiles
+    echo "alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+    alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    dotfiles config --local status.showUntrackedFiles no
+    # Create an empty repo called .dotfiles in GitHub
+    dotfiles remote add origin https://github.com/YourGithubUsername/.dotfiles.git
+    dotfiles add .bashrc #basically you add whatever you want to the repo
+    dotfiles status # If you want to check the status
+    dotfiles commit -m "The commit"
+    git push -u origin master
+
+Cloning:
+    git clone --bare https://github.com/YourGithubUsername/.dotfiles.git $HOME/.dotfiles
+    # Surprisingly but after the clone, we only have the .dotfiles directory and we don't yet have the actual dotfiles/repo content. We need to checkout
+    alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    dotfiles checkout -f # Keep in mind, that if a file that has a name of one of the dotfiles in the repo, exists already in the same location on the machine you are cloning to, it will get replaced without git even asking you or telling you, because of the option -f
+    # Again, we need to tell the repo (the cloned one, on the new machine, to not show us any untracked files
+    dotfiles config --local status.showUntrackedFiles no
+    # If you decide to give the repo a README.md file on creation or after that via Github's interface, there's no way that I know of, to ignore it when cloning.
+
+Usage:
+    # Usage is the same on the original repo and on the clonned repo, like with any other repo - you check the status, fetch and pull or add, commit and push

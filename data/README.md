@@ -372,6 +372,7 @@ X ~/.vimrc
 X ~/.i3
 ~/.config/polybar
 all shit i data folder
+  kolla vad som har pushats. pusha resten
 X ~/.config/rofi
 X ~/.config/picom.conf
 X ~/.config/vifm

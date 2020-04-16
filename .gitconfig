@@ -3,7 +3,5 @@
 	email = martinmalmstrom@hotmail.com
 [core]
     editor = vim
-	compression = 0
 [http]
-	postBuffer = 500M
-	maxRequestBuffer = 100M
+	postBuffer = 524288000
